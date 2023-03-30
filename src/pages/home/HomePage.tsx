@@ -5,6 +5,7 @@ import Grid from '@mui/material/Grid';
 import PageContent from 'components/PageContent';
 import Achievement from 'features/achievement/Achievement';
 import BodyChart from 'features/bodyChart/BodyChart';
+import MealHistory from 'features/mealHistory/MealHistory';
 import './HomePage.scss';
 
 const BannerGridWrapper = styled(Grid)`
@@ -27,6 +28,9 @@ function HomePage() {
             <BodyChart />
           </BannerGridWrapper>
         </Grid>
+      </Container>
+      <Container>
+        <MealHistory />
       </Container>
     </PageContent>
   );

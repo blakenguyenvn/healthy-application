@@ -39,8 +39,14 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### `yarn lint`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Note: it will search for problems, but will not fix**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `yarn lint fix`
+
+**Note: it will search and try to fix the problems**
+
+### `yarn format`
+
+**Note: it will call prettier to fix the code style**
