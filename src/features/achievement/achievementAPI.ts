@@ -1,6 +1,9 @@
-// A mock function to mimic making an async request for data
-export function fetchCount(amount = 1) {
-  return new Promise<{ data: number }>((resolve) =>
-    setTimeout(() => resolve({ data: amount }), 500)
+interface AchievementType {
+  rate: number;
+  date: string;
+}
+export function fetchAchievement() {
+  return new Promise<{ data: AchievementType }>((resolve) =>
+    setTimeout(() => resolve({ data: { rate: 75, date: '03/23' } }), 500),
   );
 }

@@ -1,45 +1,49 @@
 import { createTheme } from '@mui/material/styles';
 
-interface PaletteColor {
-  light?: string;
-  main: string;
-  dark?: string;
-  contrastText?: string;
-}
+declare module '@mui/material/styles' {
+  interface PaletteColor {
+    darker?: string;
+  }
 
-interface CommonColor {
-  black: string;
-  white: string;
-  gray: string;
-}
+  interface SimplePaletteColorOptions {
+    darker?: string;
+  }
 
-interface TextColor {
-  disabled: string;
-  icon: string;
-  primary: string;
-  secondary: string;
+  interface TypeText {
+    icon?: string;
+  }
+
+  interface TypeBackground {
+    header?: string;
+    footer?: string;
+  }
 }
 
 const theme = createTheme({
   palette: {
-    common: <CommonColor>{
-      black: '#2E2E2E',
-      white: '#FFFFFF',
-      gray: '#777777',
+    common: {
+      black: '#2e2e2e',
+      white: '#ffffff',
     },
-    primary: <PaletteColor>{
-      light: '#FFCC21',
-      main: '#FF963C',
-      darker: '#EA6C00',
-      contrastText: '#FFFFFF',
+    primary: {
+      light: '#ffcc21',
+      main: '#ff963C',
+      darker: '#ea6c00',
+      contrastText: '#ffffff',
     },
-    secondary: <PaletteColor>{
-      main: '#8FE9D0',
+    secondary: {
+      main: '#8fe9d0',
     },
-    text: <TextColor>{
+    text: {
       disabled: '#777777',
-      icon: '#FF963C',
+      icon: '#ff963c',
       primary: '#414141',
+    },
+    background: {
+      default: '#fff',
+      paper: '#414141',
+      header: '#414141',
+      footer: '#414141',
     },
   },
 });

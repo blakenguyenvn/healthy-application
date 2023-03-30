@@ -1,0 +1,9 @@
+.percentage-circle {
+  animation: circle_progress 1000ms ease-in-out;
+}
+
+@keyframes circle_progress {
+  0% {
+    stroke-dasharray: 0, 100;
+  }
+}
